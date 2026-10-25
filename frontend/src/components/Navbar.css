@@ -1,0 +1,141 @@
+
+/* KNOWSPHERE AI - NAVIGATION BAR */
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 78px;
+  padding: 14px clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid #ffffff12;
+  background: linear-gradient(100deg, #0a1129f5, #100e2bf5);
+  color: #f5f3ff;
+  box-sizing: border-box;
+}
+
+.navbar *,
+.navbar *::before,
+.navbar *::after {
+  box-sizing: border-box;
+}
+
+.navbar .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: #f5f3ff;
+  text-decoration: none;
+}
+
+.navbar-logo-symbol {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #8a7aff80;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1b91ff, #8557ff);
+  box-shadow: 0 0 22px #4a54ff26;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.navbar-logo-text {
+  color: #f5f3ff;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 750;
+  letter-spacing: -0.6px;
+  white-space: nowrap;
+}
+
+.navbar-logo-text span {
+  color: #a995ff;
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.navbar .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #bac5e7;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.navbar .nav-link:hover {
+  border-color: #7d76ff30;
+  background: #ffffff09;
+  color: #ffffff;
+}
+
+.navbar .nav-link.active {
+  border-color: #8b7bff50;
+  background: linear-gradient(100deg, #916cff22, #347bff18);
+  color: #c6b8ff;
+}
+
+.navbar .nav-link:focus-visible,
+.navbar .logo:focus-visible {
+  outline: 2px solid #a995ff;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .navbar .nav-links {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .navbar .nav-link {
+    padding: 9px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar {
+    padding: 14px;
+  }
+
+  .navbar .nav-links {
+    gap: 3px;
+  }
+
+  .navbar .nav-link {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

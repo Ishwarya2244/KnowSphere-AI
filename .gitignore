@@ -1,0 +1,47 @@
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables and API keys
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Private uploaded documents and vector database
+/backend/uploads/
+/backend/chroma_db/
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+# Old frontend backup
+/frontend_backup/
+
+# Local backend environment and generated files
+/backend/venv/
+/backend/__pycache__/
+/backend/main_backup.py
+/backend/main_old.py
+
+# Frontend dependencies and build output
+/frontend/node_modules/
+/frontend/dist/
+
+# Temporary learning notes
+/Notice .txt
